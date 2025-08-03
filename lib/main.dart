@@ -1,5 +1,6 @@
-import 'package:flipzy/showcase.dart';
-import 'package:flipzy/splash.dart';
+import 'package:animation_world/showcase.dart';
+import 'package:animation_world/splash.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

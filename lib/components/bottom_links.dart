@@ -1,4 +1,5 @@
-import 'package:flipzy/components/my_data.dart';
+
+import 'package:animation_world/components/my_data.dart';
 import 'package:flutter/material.dart';
 
 class BottomLinks extends StatelessWidget {
