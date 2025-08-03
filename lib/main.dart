@@ -1,5 +1,5 @@
-import 'package:animation_world/showcase.dart';
-import 'package:animation_world/splash.dart';
+import 'package:animation_world/animated_cards/showcase.dart';
+import 'package:animation_world/animated_cards/splash.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
