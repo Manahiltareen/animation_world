@@ -1,47 +1,26 @@
-import 'package:flutter/material.dart';
-import 'dart:math';
 
-class AnimatedColorPalette extends StatefulWidget {
+import 'package:animation_world/animated_color_palette/paletteController.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+
+class AnimatedColorPalette extends StatelessWidget {
   const AnimatedColorPalette({super.key});
 
   @override
-  State<AnimatedColorPalette> createState() => _AnimatedColorPaletteState();
-}
-
-class _AnimatedColorPaletteState extends State<AnimatedColorPalette> {
-  List<Color> currentPalette = generateRandomPalette();
-
-  static List<Color> generateRandomPalette() {
-    final random = Random();
-    return List.generate(
-      5,
-          (_) => Color.fromRGBO(
-        random.nextInt(256),
-        random.nextInt(256),
-        random.nextInt(256),
-        1,
-      ),
-    );
-  }
-
-  void regeneratePalette() {
-    setState(() {
-      currentPalette = generateRandomPalette();
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final PaletteController controller = Get.put(PaletteController());
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Color Palette Generator'),
       ),
       body: SingleChildScrollView(
         child: Center(
-          child: Column(
+          child: Obx(() => Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              for (Color color in currentPalette)
+              for (Color color in controller.currentPalette)
                 AnimatedContainer(
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.linearToEaseOut,
@@ -58,11 +37,14 @@ class _AnimatedColorPaletteState extends State<AnimatedColorPalette> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                onPressed: regeneratePalette,
-                child: const Text('Generate New Palette',style: TextStyle(color: Colors.white),),
+                onPressed: controller.regeneratePalette,
+                child: const Text(
+                  'Generate New Palette',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ],
-          ),
+          )),
         ),
       ),
     );
