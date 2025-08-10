@@ -1,6 +1,7 @@
 import 'package:animation_world/animated_cards/showcase.dart';
 import 'package:animation_world/animated_cards/splash.dart';
 import 'package:animation_world/animated_color_palette/animatedColor.dart';
+import 'package:animation_world/onboarding/view/onboarding_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimatedColorPalette()
+      home: AnimatedOnboardingScreen(),
+      // AnimatedColorPalette()
       // FlipzySplash(nextScreen: Showcase()),
     );
   }
