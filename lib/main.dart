@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:
-      // AnimatedOnboardingScreen(),
+      AnimatedOnboardingScreen(),
       // AnimatedColorPalette()
-      FlipzySplash(nextScreen: Showcase()),
+      // FlipzySplash(nextScreen: Showcase()),
     );
   }
 }
