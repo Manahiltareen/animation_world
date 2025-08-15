@@ -8,7 +8,7 @@ class PaletteController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    regeneratePalette(); // initialize with colors
+    regeneratePalette(); 
   }
 
   void regeneratePalette() {

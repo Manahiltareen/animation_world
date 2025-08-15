@@ -1,5 +1,4 @@
-import 'package:animation_world/animated_cards/showcase.dart';
-import 'package:animation_world/animated_cards/splash.dart';
+
 import 'package:animation_world/animated_color_palette/animatedColor.dart';
 import 'package:animation_world/onboarding/view/onboarding_screen.dart';
 

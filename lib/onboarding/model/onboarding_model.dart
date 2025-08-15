@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class OnboardingPageData {
-  final String lottieAsset; // Lottie animation file path
+  final String lottieAsset;
   final String title;
   final String description;
   final Color backgroundColor;
