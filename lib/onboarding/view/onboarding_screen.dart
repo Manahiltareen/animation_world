@@ -1,5 +1,6 @@
 
 import 'package:animation_world/onboarding/model/onboarding_model.dart';
+import 'package:animation_world/onboarding/widgets/skip_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
@@ -137,6 +138,7 @@ class _AnimatedOnboardingScreenState extends State<AnimatedOnboardingScreen> {
               });
             },
           ),
+          // SkipButton(onTap: (){}),
           Positioned(
             top: size.height * 0.06,
             right: 25,
